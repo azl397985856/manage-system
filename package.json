@@ -6,7 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "axios": "^0.15.3",
@@ -17,7 +19,8 @@
     "vue-echarts-v3": "^1.0.3",
     "vue-quill-editor": "^1.1.1",
     "vue-router": "^2.2.0",
-    "vue-simplemde": "^0.3.2"
+    "vue-simplemde": "^0.3.2",
+    "snyk": "^1.134.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
@@ -55,5 +58,6 @@
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
-  }
+  },
+  "snyk": true
 }
